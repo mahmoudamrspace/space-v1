@@ -5,6 +5,19 @@ import Inner from "../elements/inner";
 import Content from "../elements/content";
 import Svg from "./svg";
 import { UpDown, UpDownWide } from "../styles/animations";
+import Html from "../assets/images/html.png";
+import Css from "../assets/images/css.png";
+import Js from "../assets/images/js.png";
+import Docker from "../assets/images/docker.png";
+import Mongo from "../assets/images/mongo.png";
+import Node from "../assets/images/nodejs.png";
+import Python from "../assets/images/python.png";
+import React from "../assets/images/react.png";
+import Redis from "../assets/images/redis.png";
+import Ts from "../assets/images/typescript.png";
+import Api from "../assets/images/api.png";
+import Sql from "../assets/images/sql.png";
+
 // @ts-ignore
 import StackMDX from "../sections/stack.mdx";
 const Stack = ({ offset, factor }: { offset: number; factor?: number }) => (
@@ -82,35 +95,35 @@ const Stack = ({ offset, factor }: { offset: number; factor?: number }) => (
           }}
         >
           <img
-            src='/html.png'
+            src={Html}
             width={50}
             alt=''
             color='icon_orange'
             sx={{ margin: "1rem" }}
           />
           <img
-            src='/css.png'
+            src={Css}
             width={50}
             alt=''
             color='icon_orange'
             sx={{ margin: "1rem" }}
           />{" "}
           <img
-            src='/js.png'
+            src={Js}
             width={50}
             alt=''
             color='icon_orange'
             sx={{ margin: "1rem" }}
           />{" "}
           <img
-            src='/typescript.png'
+            src={Ts}
             width={50}
             alt=''
             color='icon_orange'
             sx={{ margin: "1rem" }}
           />{" "}
           <img
-            src='/react.png'
+            src={React}
             width={50}
             alt=''
             color='icon_orange'
@@ -146,7 +159,7 @@ const Stack = ({ offset, factor }: { offset: number; factor?: number }) => (
             />
           </svg>
           <img
-            src='/python.png'
+            src={Python}
             width={50}
             alt=''
             color='icon_orange'
@@ -165,42 +178,42 @@ const Stack = ({ offset, factor }: { offset: number; factor?: number }) => (
             </g>
           </svg>
           <img
-            src='/nodejs.png'
+            src={Node}
             width={50}
             alt=''
             color='icon_orange'
             sx={{ margin: "1rem" }}
           />{" "}
           <img
-            src='/api.png'
+            src={Api}
             width={50}
             alt=''
             color='icon_orange'
             sx={{ margin: "1rem" }}
           />
           <img
-            src='/sql.png'
+            src={Sql}
             width={50}
             alt=''
             color='icon_orange'
             sx={{ margin: "1rem" }}
           />
           <img
-            src='/mongo.png'
+            src={Mongo}
             width={50}
             alt=''
             color='icon_orange'
             sx={{ margin: "1rem" }}
           />
           <img
-            src='/redis.png'
+            src={Redis}
             width={50}
             alt=''
             color='icon_orange'
             sx={{ margin: "1rem" }}
           />
           <img
-            src='/docker.png'
+            src={Docker}
             width={50}
             alt=''
             color='icon_orange'
