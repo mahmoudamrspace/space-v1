@@ -44,7 +44,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
           <s></s>
         </span>
       </div>
-      <Divider speed={2} offset={offset} factor={factor} zIndex={100}>
+      <Divider speed={0.1} offset={offset} factor={factor} zIndex={100}>
         <div
           sx={{
             height: "35%",

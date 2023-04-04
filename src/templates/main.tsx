@@ -9,12 +9,12 @@ import Stack from "../components/stack";
 
 const Main = () => (
   <Layout>
-    <Parallax pages={7}>
+    <Parallax pages={8}>
       <Hero offset={0} factor={1} />
       <About offset={2} factor={1.5} />
-      <Projects offset={4} factor={1} />
-      <Stack offset={5} factor={1} />
-      <Contact offset={6} factor={1} />
+      <Projects offset={4} factor={1.5} />
+      <Stack offset={6} factor={1} />
+      <Contact offset={7} factor={1} />
     </Parallax>
   </Layout>
 );

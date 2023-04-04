@@ -9,15 +9,6 @@ import AboutMDX from "../sections/about.mdx";
 
 const About = ({ offset, factor }: { offset: number; factor?: number }) => (
   <div>
-          <div id="sky">
-        <span>
-          <s></s>
-          <s></s>
-          <s></s>
-          <s></s>
-          <s></s>
-        </span>
-      </div>
     <Divider
       bg="divider"
       clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
