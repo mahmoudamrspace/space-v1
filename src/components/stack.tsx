@@ -4,7 +4,7 @@ import Divider from "../elements/divider";
 import Inner from "../elements/inner";
 import Content from "../elements/content";
 import Svg from "./svg";
-import { UpDown, UpDownWide } from "../styles/animations";
+import { UpDown } from "../styles/animations";
 import Html from "../assets/images/html.png";
 import Css from "../assets/images/css.png";
 import Js from "../assets/images/js.png";
@@ -85,7 +85,7 @@ const Stack = ({ offset, factor }: { offset: number; factor?: number }) => (
     </Divider>
     <Content speed={0.4} offset={offset + 0.1} factor={factor}>
       <Inner>
-        <StackMDX />
+        {/* <StackMDX /> */}
         <div
           sx={{
             display: "flex",

@@ -1,14 +1,21 @@
 #sky{
-    width:100%;height:670px;
-    margin:34px auto;position:relative
+    width:100%;
+    height:100vh;
+    margin:0 auto;
+    padding: 4rem;
+    position:relative
   }
   #sky span{  
-    width:100%;height:100%;
+    width:100%;
+    height:100%;
   /*  background:#4f5d73;*/
-    background-image: radial-gradient(1600px at 70% 120%, #12102e 30%, #020409 100%);
-     border-radius:50%;
-    top:0; left:0;
-    position:absolute;z-index:2;overflow:hidden
+    background-image: radial-gradient(1600px at 10% 50%, #12102e 10%, #020409 40%);
+     /* border-radius:50%; */
+    top:0; 
+    left:0;
+    position:absolute;
+    z-index:2;
+    overflow:hidden
       
   }
   #sky span s{

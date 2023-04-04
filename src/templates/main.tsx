@@ -7,16 +7,16 @@ import About from "../components/about";
 import Contact from "../components/contact";
 import Stack from "../components/stack";
 
-const Cara = () => (
+const Main = () => (
   <Layout>
-    <Parallax pages={7}>
+    <Parallax pages={6}>
       <Hero offset={0} factor={1} />
-      <About offset={1.5} factor={1} />
-      <Projects offset={2.7} factor={1.7} />
-      <Stack offset={5} factor={1} />
-      <Contact offset={6} factor={1} />
+      <About offset={1} factor={1.5} />
+      <Projects offset={2.5} factor={1} />
+      <Stack offset={4} factor={1} />
+      <Contact offset={5} factor={1} />
     </Parallax>
   </Layout>
 );
 
-export default Cara;
+export default Main;

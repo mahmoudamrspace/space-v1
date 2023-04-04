@@ -17,7 +17,7 @@ type DividerProps = {
 const Divider = ({
   speed,
   offset,
-  factor = 1,
+  factor,
   bg = ``,
   fill = ``,
   clipPath = ``,
