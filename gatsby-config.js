@@ -1,7 +1,7 @@
 require(`dotenv`).config();
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
-const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID;
+const googleAnalyticsTrackingId = process.env.google_analytics_id;
 
 module.exports = {
   siteMetadata: {
