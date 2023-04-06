@@ -8,7 +8,7 @@ module.exports = {
     siteTitle: `Mahmoud Amr`,
     siteTitleAlt: `Mahmoud Amr`,
     siteHeadline: `Mahmoud Amr`,
-    siteUrl: `https://mahmoudamrr.github.io`,
+    siteUrl: `https://www.mahmoudamr.space`,
     siteDescription: ``,
     siteLanguage: `en`,
     siteImage: `/ma.png`,
