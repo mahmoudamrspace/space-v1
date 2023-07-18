@@ -15,7 +15,6 @@ import {
 import { hidden } from "../styles/utils";
 // @ts-ignore
 import Intro from "../sections/intro.mdx";
-import "./sky.css";
 import Lottie from "lottie-web";
 import animate from "lottie-web";
 import { useRef, useEffect } from "react";
@@ -35,15 +34,6 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
 
   return (
     <div className="hero">
-      <div id="sky">
-        <span>
-          <s></s>
-          <s></s>
-          <s></s>
-          <s></s>
-          <s></s>
-        </span>
-      </div>
       <Divider speed={0.1} offset={offset} factor={factor} zIndex={100}>
         <div
           sx={{
