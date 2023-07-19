@@ -17,7 +17,7 @@ const Contact = ({
 }) => (
   <div>
     <Divider
-      fill="divider"
+      fill='divider'
       speed={0.2}
       offset={offset}
       factor={factor}
@@ -40,17 +40,17 @@ const Contact = ({
           }}
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            id="contact-wave"
-            viewBox="0 0 800 338.05"
-            preserveAspectRatio="none"
+            xmlns='http://www.w3.org/2000/svg'
+            id='contact-wave'
+            viewBox='0 0 800 338.05'
+            preserveAspectRatio='none'
           >
             <path>
               <animate
-                attributeName="d"
-                values="M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 200 150 400 200 Q 600 250 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z"
-                repeatCount="indefinite"
-                dur="30s"
+                attributeName='d'
+                values='M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 200 150 400 200 Q 600 250 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z'
+                repeatCount='indefinite'
+                dur='30s'
               />
             </path>
           </svg>
@@ -60,12 +60,12 @@ const Contact = ({
     <Content speed={0.4} offset={offset} factor={factor}>
       <Inner>
         <ContactMDX />
-        <a href="/resume.pdf" target="_blank">
+        <a href='/resume.pdf' target='_blank'>
           <div sx={{ display: "inline-flex", justifyContent: "center" }}>
-            <h2 sx={{ marginRight: "1rem" }}>My Resume</h2>
+            <h2 sx={{ marginRight: "1rem" }}>Resume</h2>
             <UpDown>
               <img
-                src="/cv.png"
+                src='/cv.png'
                 width={30}
                 height={30}
                 sx={{ position: "relative", top: "20%" }}
@@ -79,57 +79,57 @@ const Contact = ({
     <Divider speed={0.1} offset={offset} factor={factor} zIndex={100}>
       <UpDown>
         <Svg
-          icon="upDown"
+          icon='upDown'
           hiddenMobile
           width={8}
-          color="icon_darkest"
-          left="70%"
-          top="20%"
+          color='icon_darkest'
+          left='70%'
+          top='20%'
         />
         <Svg
-          icon="triangle"
+          icon='triangle'
           width={8}
           stroke
-          color="icon_darkest"
-          left="25%"
-          top="5%"
+          color='icon_darkest'
+          left='25%'
+          top='5%'
         />
       </UpDown>
       <UpDownWide>
         <Svg
-          icon="triangle"
+          icon='triangle'
           width={12}
           stroke
-          color="icon_brightest"
-          left="95%"
-          top="50%"
+          color='icon_brightest'
+          left='95%'
+          top='50%'
         />
         <Svg
-          icon="circle"
+          icon='circle'
           width={6}
-          color="icon_brightest"
-          left="85%"
-          top="15%"
+          color='icon_brightest'
+          left='85%'
+          top='15%'
         />
         <Svg
-          icon="upDown"
+          icon='upDown'
           hiddenMobile
           width={8}
-          color="icon_darkest"
-          left="45%"
-          top="10%"
+          color='icon_darkest'
+          left='45%'
+          top='10%'
         />
       </UpDownWide>
-      <Svg icon="circle" width={6} color="icon_brightest" left="4%" top="20%" />
-      <Svg icon="circle" width={12} color="icon_darkest" left="70%" top="60%" />
-      <Svg icon="box" width={12} color="icon_darkest" left="20%" top="30%" />
+      <Svg icon='circle' width={6} color='icon_brightest' left='4%' top='20%' />
+      <Svg icon='circle' width={12} color='icon_darkest' left='70%' top='60%' />
+      <Svg icon='box' width={12} color='icon_darkest' left='20%' top='30%' />
       <Svg
-        icon="hexa"
+        icon='hexa'
         width={8}
         stroke
-        color="icon_darkest"
-        left="80%"
-        top="70%"
+        color='icon_darkest'
+        left='80%'
+        top='70%'
       />
     </Divider>
   </div>
