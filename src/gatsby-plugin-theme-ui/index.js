@@ -24,6 +24,17 @@ const theme = merge(tailwind, {
     icon_pink: tailwind.colors.pink[5],
     icon_purple: tailwind.colors.purple[6],
     icon_green: tailwind.colors.green[5],
+    icon_teal: tailwind.colors.teal[5],
+    // Space-themed colors
+    nebula_purple: `#8a2be2`,
+    nebula_blue: `#1e90ff`,
+    nebula_pink: `#ff1493`,
+    nebula_orange: `#ff8c00`,
+    cosmic_blue: `#0a0a1a`,
+    deep_space: `#020409`,
+    star_white: `rgba(255, 255, 255, 0.9)`,
+    star_yellow: `rgba(255, 240, 200, 0.8)`,
+    star_blue: `rgba(200, 220, 255, 0.7)`,
     // modes: {
     //   light: {
     //     text: tailwind.colors.gray[8],
@@ -70,8 +81,8 @@ const theme = merge(tailwind, {
     },
     p: {
       fontSize: [1, 2],
-      letterSpacing: `-0.003em`,
-      lineHeight: `body`,
+      letterSpacing: `0.01em`,
+      lineHeight: `1.8`,
       "--baseline-multiplier": 0.179,
       "--x-height-multiplier": 0.35,
       color: `text`,
@@ -88,7 +99,12 @@ const theme = merge(tailwind, {
       fontSize: [6, 7, 8],
       mt: 2,
       mb: 3,
-      textShadow: `rgba(255, 255, 255, 0.15) 0px 5px 35px`,
+      textShadow: `
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.3),
+        0 0 30px rgba(255, 255, 255, 0.2),
+        0 0 40px rgba(255, 255, 255, 0.1)
+      `,
       letterSpacing: `wide`,
       color: `heading`,
     },
@@ -96,19 +112,30 @@ const theme = merge(tailwind, {
       fontSize: [4, 5, 6],
       mt: 2,
       mb: 2,
+      textShadow: `
+        0 0 8px rgba(255, 255, 255, 0.4),
+        0 0 15px rgba(255, 255, 255, 0.2),
+        0 0 25px rgba(255, 255, 255, 0.1)
+      `,
       color: `heading`,
     },
     h3: {
       fontSize: [3, 4, 5],
       mt: 3,
+      textShadow: `
+        0 0 6px rgba(255, 255, 255, 0.3),
+        0 0 12px rgba(255, 255, 255, 0.15)
+      `,
       color: `heading`,
     },
     h4: {
       fontSize: [2, 3, 4],
+      textShadow: `0 0 5px rgba(255, 255, 255, 0.2)`,
       color: `heading`,
     },
     h5: {
       fontSize: [1, 2, 3],
+      textShadow: `0 0 3px rgba(255, 255, 255, 0.15)`,
       color: `heading`,
     },
     h6: {

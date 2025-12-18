@@ -9,23 +9,22 @@ const Footer = () => {
   // };
 
   return (
-    <Box as="footer" variant="footer">
-      {/* <button
-        sx={{
-          variant: `buttons.toggle`,
-          fontWeight: `semibold`,
-          display: `block`,
-          mx: `auto`,
-          mb: 3,
-        }}
-        onClick={toggleColorMode}
-        type="button"
-        aria-label="Toggle dark mode"
-      >
-        {isDark ? `Light` : `Dark`}
-      </button> */}
-      Mahmoud Amr &copy; {new Date().getFullYear()}.
-    </Box>
+    <div
+      sx={{
+        width: "100%",
+        textAlign: "center",
+        color: "textMuted",
+        px: [2, 3],
+        py: [3, 4],
+        mt: 4,
+        position: "relative",
+        display: "block",
+      }}
+    >
+      <div sx={{ whiteSpace: "nowrap" }}>
+        Mahmoud Amr &copy; {new Date().getFullYear()}
+      </div>
+    </div>
   );
 };
 

@@ -32,35 +32,41 @@ const upDownWide = keyframes`
   }
 `;
 
-const upDownWideRotate = keyframes`
-  from {
-    transform: translateY(0) rotate(0deg);
-  }
-  to {
-    transform: translateY(-30rem) rotate(50deg)
-  }
-`;
-
-const opacity = keyframes`
-0%   { opacity: 0; };
-100% { opacity: 1; };
-`;
-
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg) scale(0.5, 0.5);
-  }
-  to {
-    transform: rotate(360deg) scale(1.5, 1.5);
-  }
-`;
-
 const flip = keyframes`
   from {
     transform: translateY(0) rotate(20deg) scale(-1, -1);
   }
   to {
     transform: translateY(10px) rotate(30deg) scale(-1, -1);
+  }
+`;
+
+const twinkle = keyframes`
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale3d(1.05, 1.05, 1);
+  }
+`;
+
+const float = keyframes`
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(5px, -10px, 0);
+  }
+`;
+
+const drift = keyframes`
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(15px, -20px, 0) rotate(2deg);
   }
 `;
 
@@ -72,20 +78,30 @@ const upDownWideAnimation = css`
   ${upDownWide} 18s ease-in-out infinite alternate;
 `;
 
-const upDownWideRotateAnimation = css`
-  ${upDownWideRotate} 18s ease-in-out infinite alternate;
-`;
-
-const upDownOpacityAnimation = css`
-  ${opacity} 10s ease-in-out infinite alternate, ${upDownWide} 10s ease-in-out infinite alternate
-`;
-
-const rotateAnimation = css`
-  ${rotate} 12s ease-in-out infinite alternate;
-`;
 
 const flipAnimation = css`
   ${flip} 20s ease-in-out infinite alternate;
+`;
+
+const twinkleAnimation = css`
+  ${twinkle} 4s ease-in-out infinite;
+  will-change: opacity, transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+`;
+
+const floatAnimation = css`
+  ${float} 8s ease-in-out infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+`;
+
+const driftAnimation = css`
+  ${drift} 25s ease-in-out infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 `;
 
 export function UpDown({ children }: { children: React.ReactNode }) {
@@ -122,59 +138,6 @@ export function UpDownWide({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function UpDownWideRotate({ children }: { children: React.ReactNode }) {
-  return (
-    <div
-      css={css`
-        animation: ${upDownWideRotateAnimation};
-        position: absolute;
-        width: 60px;
-        height: 80px;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      `}
-    >
-      {children}
-    </div>
-  );
-}
-
-export function UpDownOpacity({ children }: { children: React.ReactNode }) {
-  return (
-    <div
-      css={css`
-        animation: ${upDownOpacityAnimation};
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      `}
-    >
-      {children}
-    </div>
-  );
-}
-
-export function Rotatee({ children }: { children: React.ReactNode }) {
-  return (
-    <div
-      css={css`
-        animation: ${rotateAnimation};
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      `}
-    >
-      {children}
-    </div>
-  );
-}
-
 export function FlipSatellite({ children }: { children: React.ReactNode }) {
   return (
     <div
@@ -187,6 +150,45 @@ export function FlipSatellite({ children }: { children: React.ReactNode }) {
         left: 0;
         right: 0;
         bottom: 0;
+      `}
+    >
+      {children}
+    </div>
+  );
+}
+
+export function Twinkle({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      css={css`
+        animation: ${twinkleAnimation};
+        position: relative;
+      `}
+    >
+      {children}
+    </div>
+  );
+}
+
+export function Float({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      css={css`
+        animation: ${floatAnimation};
+        position: relative;
+      `}
+    >
+      {children}
+    </div>
+  );
+}
+
+export function Drift({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      css={css`
+        animation: ${driftAnimation};
+        position: relative;
       `}
     >
       {children}

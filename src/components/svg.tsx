@@ -78,7 +78,7 @@ type IconType =
 
 type SVGProps = {
   stroke?: boolean;
-  color?: string | number | any;
+  color?: string | number;
   width: number;
   icon: IconType;
   left: string;
@@ -107,6 +107,8 @@ const Svg = ({
       top,
     }}
     viewBox={icons[icon].viewBox}
+    aria-hidden="true"
+    role="presentation"
   >
     {icons[icon].shape}
   </svg>

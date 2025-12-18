@@ -30,17 +30,38 @@ const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children
     url: `${siteUrl}${pathname || ``}`,
     image: `${siteUrl}${image || defaultImage}`,
   }
+  // Structured data (JSON-LD) for better SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: siteTitle,
+    url: siteUrl,
+    description: seo.description,
+    image: seo.image,
+    sameAs: [
+      // Add social media profiles here if available
+    ],
+  }
+
   return (
     <Helmet title={title} defaultTitle={defaultTitle} titleTemplate={`%s | ${siteTitle}`}>
       <html lang={siteLanguage} />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
+      <meta name="author" content={author} />
+      <link rel="canonical" href={seo.url} />
+      
+      {/* Open Graph */}
       <meta property="og:title" content={seo.title} />
       <meta property="og:url" content={seo.url} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
       <meta property="og:type" content="website" />
       <meta property="og:image:alt" content={seo.description} />
+      <meta property="og:site_name" content={siteTitle} />
+      <meta property="og:locale" content={siteLanguage} />
+      
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:url" content={seo.url} />
@@ -48,10 +69,17 @@ const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children
       <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:image:alt" content={seo.description} />
       <meta name="twitter:creator" content={author} />
-      {/* <meta name="gatsby-theme" content="@lekoarts/gatsby-theme-cara" /> */}
+      
+      {/* Icons */}
       <link rel="icon" type="image/png" sizes="32x32" href={withPrefix(`/ma.png`)} />
       <link rel="icon" type="image/png" sizes="16x16" href={withPrefix(`/ma.png`)} />
       <link rel="apple-touch-icon" sizes="180x180" href={withPrefix(`/apple-touch-icon.png`)} />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+      
       {children}
     </Helmet>
   )
